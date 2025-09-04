@@ -5,7 +5,7 @@ from argparse import Namespace
 
 from src.mlp import MLP
 
-class LowerBlock(nn.Module):
+class CaudalCranialBlock(nn.Module):
     def __init__(
             self, 
             args : Namespace = None, 
@@ -80,7 +80,7 @@ class LowerBlock(nn.Module):
         
         return x
 
-class UpperBlock(nn.Module):
+class CranialCaudalBlock(nn.Module):
     def __init__(
         self,
         args : Namespace = None,
@@ -158,7 +158,7 @@ class UpperBlock(nn.Module):
         
         return x
   
-class TransformerEncoderBlock(nn.Module):
+class GlobalBlock(nn.Module):
     def __init__(
         self,
         args : Namespace = None,
@@ -219,21 +219,21 @@ class AlternateAttention(nn.Module):
         self.args = args
 
         # Global Attention
-        self.global_block = TransformerEncoderBlock(args)
+        self.global_block = GlobalBlock(args)
 
         # Local Attention 1
-        self.lower_block = LowerBlock(args, window_size)
+        self.caudal_cranial_block = CaudalCranialBlock(args, window_size)
 
         # Local Attention 2
-        self.upper_block = UpperBlock(args, window_size)
+        self.cranial_caudal_block = CranialCaudalBlock(args, window_size)
 
     def forward(self, x):
 
         x = self.global_block(x)
 
-        x = self.lower_block(x)
+        x = self.caudal_cranial_block(x)
 
-        x = self.upper_block(x)
+        x = self.cranial_caudal_block(x)
 
         return x
     
