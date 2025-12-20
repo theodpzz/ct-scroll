@@ -1,14 +1,16 @@
-### CT-Scroll: A Global-Local Attention Model for 3D Chest CT Volumes 🩺👨🏻‍⚕️
+<p align="center">
+  <h2 align="center">[MIDL 2025] Imitating Radiological Scrolling: a Global-Local Attention Model for 3D Chest CT Volumes Multi-label Anomaly Classification 🩺👨🏻‍⚕️</h2>
+</p>
 
-PyTorch [CT-Scroll](https://arxiv.org/abs/2503.20652) model implementation.
+✅ PyTorch [CT-Scroll](https://arxiv.org/abs/2503.20652) model implementation.
 
-## Method Overview
+## 🧩 Method Overview
 
 The CT-Scroll architecture consists of three main components. (1) Axial slices of the volume are grouped into triplets and processed by a ResNet followed by a GAP layer, producing a vector representation per triplet. (2) The Scrolling Block then refines these embedded visual tokens using both global and local attention mechanisms. (3) Finally, the aggregated representations are fed into a classification head to predict anomalies.
 
 <img src="https://github.com/theodpzz/ct-scroll/blob/master/figures/method_overview.png" alt="Method overview" width="900">
 
-## Getting Started
+## 🚀 Getting Started
 
 ### Clone the Repository
 
