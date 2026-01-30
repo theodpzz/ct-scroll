@@ -2,7 +2,7 @@
   <h2 align="center">[MIDL 2025] Imitating Radiological Scrolling: a Global-Local Attention Model for 3D Chest CT Volumes Multi-label Anomaly Classification 🩺👨🏻‍⚕️</h2>
 </p>
 
-✅ PyTorch [CT-Scroll](https://arxiv.org/abs/2503.20652) model implementation.
+✅ PyTorch [CT-Scroll](https://arxiv.org/pdf/2503.20652) model implementation.
 
 ## 🧩 Method Overview
 
