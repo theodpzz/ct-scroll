@@ -58,7 +58,7 @@ predictions, loss = model(volumes, labels)
 
 CT scans are reformated such that the first axis points from Inferior to Superior, the second from Right to Left, and the third from Anterior to Posterior (SLP). The spacing (z, x, y) = (1.5, 0.75, 0.75) in millimeters. The Hounsfield Unit range [-1000, +200] is clipped to the range [0, 1] and normalized using ImageNet statistic (-0.449).
 
-<img src="https://github.com/theodpzz/ct-scroll/blob/main/figures/orientation.png" alt="Orientation" width=
+<img src="https://github.com/theodpzz/ct-scroll/blob/master/figures/orientation.png" alt="Orientation" width="900">
 
 
 ### Useful links
