@@ -60,7 +60,12 @@ CT scans are reformated such that the first axis points from Inferior to Superio
 
 <img src="https://github.com/theodpzz/ct-scroll/blob/master/figures/orientation.png" alt="Orientation" width="900">
 
-
-### Useful links
+## 🔗 Useful links
 
 2D ResNet18 pretrained on ImageNet is available at: [https://download.pytorch.org/models/resnet18-f37072fd.pth](https://download.pytorch.org/models/resnet18-f37072fd.pth).
+
+CT-Scroll pretrained weights on CT-RATE are available at [https://huggingface.co/theodpzz/ct-scroll](https://huggingface.co/theodpzz/ct-scroll).
+
+## 🤝🏻 Acknowledgment
+
+We thank contributors from the CT-RATE dataset available at [https://huggingface.co/datasets/ibrahimhamamci/CT-RATE](https://huggingface.co/datasets/ibrahimhamamci/CT-RATE), and from the Rad-ChestCT dataset available at [https://zenodo.org/records/6406114](https://zenodo.org/records/6406114).
