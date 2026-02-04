@@ -58,4 +58,4 @@ predictions, loss = model(volumes, labels)
 
 CT scans are reformated such that the first axis points from Inferior to Superior, the second from Right to Left, and the third from Anterior to Posterior (SLP).
 
-<img src="https://github.com/theodpzz/scroll/blob/main/figures/orientation.png" alt="Orientation" width="900">
+<img src="https://github.com/theodpzz/ct-scroll/blob/master/figures/orientation.png" alt="Orientation" width="900">
