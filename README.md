@@ -54,8 +54,13 @@ labels  = torch.randint(0, 2, (1, 18)).to(device)
 predictions, loss = model(volumes, labels)
 ```
 
-### Orientation
+### CT Scan Processing
 
-CT scans are reformated such that the first axis points from Inferior to Superior, the second from Right to Left, and the third from Anterior to Posterior (SLP).
+CT scans are reformated such that the first axis points from Inferior to Superior, the second from Right to Left, and the third from Anterior to Posterior (SLP). The spacing (z, x, y) = (1.5, 0.75, 0.75) in millimeters. The Hounsfield Unit range [-1000, +200] is clipped to the range [0, 1] and normalized using ImageNet statistic (-0.449).
 
-<img src="https://github.com/theodpzz/ct-scroll/blob/master/figures/orientation.png" alt="Orientation" width="900">
+<img src="https://github.com/theodpzz/ct-ssg/blob/main/figures/orientation.png" alt="Orientation" width=
+
+
+### Useful links
+
+2D ResNet18 pretrained on ImageNet is available at: [https://download.pytorch.org/models/resnet18-f37072fd.pth](https://download.pytorch.org/models/resnet18-f37072fd.pth).
