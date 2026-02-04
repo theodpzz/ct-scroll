@@ -64,7 +64,7 @@ CT scans are reformated such that the first axis points from Inferior to Superio
 
 2D ResNet18 pretrained on ImageNet is available at: [https://download.pytorch.org/models/resnet18-f37072fd.pth](https://download.pytorch.org/models/resnet18-f37072fd.pth).
 
-CT-Scroll pretrained weights on CT-RATE are available at [https://huggingface.co/theodpzz/ct-scroll](https://huggingface.co/theodpzz/ct-scroll).
+CT-Scroll pretrained weights on CT-RATE are available at (soon).
 
 ## 🤝🏻 Acknowledgment
 
