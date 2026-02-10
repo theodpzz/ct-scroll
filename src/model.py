@@ -53,7 +53,7 @@ class CT_Scroll(nn.Module):
         ) -> nn.Module:
         resnet = models.resnet18(weights=None)
         if path is not None:
-            resnet.load_state_dict(torch.load(self.args.path_resnet, weights_only=True))
+            resnet.load_state_dict(torch.load(path, weights_only=True))
         return nn.Sequential(*(list(resnet.children())[:-2]))
 
     def getloss(
