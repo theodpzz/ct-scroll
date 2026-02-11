@@ -10,7 +10,7 @@ The CT-Scroll architecture consists of three main components. (1) Axial slices o
 
 <img src="https://github.com/theodpzz/ct-scroll/blob/master/figures/method_overview.png" alt="Method overview" width="900">
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Clone the Repository
 
@@ -20,7 +20,7 @@ To clone this repository, use the following command:
 git clone https://github.com/theodpzz/ct-scroll.git
 ```
 
-### Installation
+### ⚡️ Installation
 
 Make sure you have Python 3 installed. Then, install the dependencies using:
 
@@ -28,7 +28,9 @@ Make sure you have Python 3 installed. Then, install the dependencies using:
 pip install -r requirements.txt
 ```
 
-### Demo
+### 🚀 CT-Scroll Demo
+
+To initialize the model with a classification head, use:
 
 ```python
 import torch
@@ -43,20 +45,29 @@ args.window_size = [16]
 args.nb_triplets = 80
 args.path_resnet = None
 
-device = torch.device('cpu')
-
 model = CT_Scroll(args)
-model.to(device);
+```
 
-volumes = torch.randn(1, 1, 240, 480, 480).to(device)
-labels  = torch.randint(0, 2, (1, 18)).to(device)
+To load [CT-Scroll weights pretrained on CT-RATE](https://huggingface.co/theodpzz/ct-scroll), use:
+
+```python
+ckpt = torch.load(path_ckpt)
+
+model.load_state_dict(ckpt)
+```
+
+To perform a forward pass, use:
+
+```python
+volumes = torch.randn(4, 1, 240, 480, 480)
+labels  = torch.randint(0, 2, (4, 18))
 
 predictions, loss = model(volumes, labels)
 ```
 
-### CT Scan Processing
+### ⚙️ CT Scan Processing
 
-CT scans are reformated such that the first axis points from Inferior to Superior, the second from Right to Left, and the third from Anterior to Posterior (SLP). The spacing (z, x, y) = (1.5, 0.75, 0.75) in millimeters. The Hounsfield Unit range [-1000, +200] is clipped to the range [0, 1] and normalized using ImageNet statistic (-0.449).
+CT scans are reformated such that the first axis points from Inferior to Superior, the second from Right to Left, and the third from Anterior to Posterior (SLP). The spacing (z, x, y) = (1.5, 0.75, 0.75) in millimeters. The Hounsfield Units are clipped to [-1000, +200], and mapped to the range [0, 1] before normalization using ImageNet statistic (-0.449).
 
 <img src="https://github.com/theodpzz/ct-scroll/blob/master/figures/orientation.png" alt="Orientation" width="900">
 
@@ -64,8 +75,22 @@ CT scans are reformated such that the first axis points from Inferior to Superio
 
 2D ResNet18 pretrained on ImageNet is available at: [https://download.pytorch.org/models/resnet18-f37072fd.pth](https://download.pytorch.org/models/resnet18-f37072fd.pth).
 
-CT-Scroll pretrained weights on CT-RATE are available at (soon).
+CT-Scroll pretrained weights on CT-RATE are available at [https://huggingface.co/theodpzz/ct-scroll](https://huggingface.co/theodpzz/ct-scroll).
 
 ## 🤝🏻 Acknowledgment
 
 We thank contributors from the CT-RATE dataset available at [https://huggingface.co/datasets/ibrahimhamamci/CT-RATE](https://huggingface.co/datasets/ibrahimhamamci/CT-RATE), and from the Rad-ChestCT dataset available at [https://zenodo.org/records/6406114](https://zenodo.org/records/6406114).
+
+## 📎Citation
+
+If you use this repository in your work, we would appreciate the following citation:
+
+```bibtex
+@InProceedings{dipiazza_2025_ctscroll,
+        title = {Imitating Radiological Scrolling: A Global-Local Attention Model for 3D Chest CT Volumes Multi-Label Anomaly Classification},
+        author = {Di Piazza, Theo and Lazarus, Carole and Nempont, Olivier and Boussel, Loic},
+        booktitle = {Proceedings of The 8nd International Conference on Medical Imaging with Deep Learning -- MIDL 2025},
+        year = {2025},
+        publisher = {PMLR},
+}
+```
