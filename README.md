@@ -74,7 +74,7 @@ with open(path_thresholds) as f:
     thresholds_map = json.load(f)["thresholds"]
 
 values = [thresholds_map[c] for c in thresholds_map.keys()]
-thresholds = torch.tensor(values, device=device)
+thresholds = torch.tensor(values)
 
 binary_predictions = 1*(predictions >= thresholds)
 ```
