@@ -67,6 +67,18 @@ labels  = torch.randint(0, 2, (4, 18))
 predictions, loss = model(volumes, labels)
 ```
 
+To load the classification thresholds and generate binary predictions, use:
+
+```python
+with open(path_thresholds) as f:
+    thresholds_map = json.load(f)["thresholds"]
+
+values = [thresholds_map[c] for c in thresholds_map.keys()]
+thresholds = torch.tensor(values, device=device)
+
+binary_predictions = 1*(predictions >= thresholds)
+```
+
 ### ⚙️ CT Scan Processing
 
 CT scans are reformated such that the first axis points from Inferior to Superior, the second from Right to Left, and the third from Anterior to Posterior (SLP). The spacing (z, x, y) = (1.5, 0.75, 0.75) in millimeters. The Hounsfield Units are clipped to [-1000, +200], and mapped to the range [0, 1] before normalization using ImageNet statistic (-0.449).
