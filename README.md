@@ -2,7 +2,8 @@
   <h2 align="center">Imitating Radiological Scrolling: a Global-Local Attention Model for 3D Chest CT Volumes Multi-label Anomaly Classification 🩺👨🏻‍⚕️</h2>
   <h4 align="center"><b>MIDL 2025</b></h4>
   <p align="center">
-    <a href="https://arxiv.org/pdf/2503.20652"><img alt='arXiv' src="https://img.shields.io/badge/arXiv-2411.17150-b31b1b.svg"></a>
+    <a href="https://arxiv.org/pdf/2503.20652"><img alt='arXiv' src="https://img.shields.io/badge/arXiv-2503.20652-b31b1b.svg"></a>
+    <a href="https://huggingface.co/theodpzz/ct-scroll"><img alt="HuggingFace" src="https://img.shields.io/badge/HuggingFace-Model-yellow?logo=huggingface"></a>
   </p>
 </p>
 
