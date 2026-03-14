@@ -1,10 +1,12 @@
 <p align="center">
-  <h2 align="center">[MIDL 2025] Imitating Radiological Scrolling: a Global-Local Attention Model for 3D Chest CT Volumes Multi-label Anomaly Classification 🩺👨🏻‍⚕️</h2>
+  <h2 align="center">Imitating Radiological Scrolling: a Global-Local Attention Model for 3D Chest CT Volumes Multi-label Anomaly Classification 🩺👨🏻‍⚕️</h2>
+  <h4 align="center"><b>MIDL 2025</b></h4>
+  <p align="center">
+    <a href="https://arxiv.org/pdf/2503.20652"><img alt='arXiv' src="https://img.shields.io/badge/arXiv-2411.17150-b31b1b.svg"></a>
+  </p>
 </p>
 
-🔥 PyTorch [CT-Scroll](https://arxiv.org/pdf/2503.20652) model implementation.
-
-📜 Accepted at the International Conference on Medical Imaging with Deep Learning - MIDL 2025.
+---
 
 ## 🧩 Method Overview
 
@@ -12,7 +14,9 @@ The CT-Scroll architecture consists of three main components. (1) Axial slices o
 
 <img src="https://github.com/theodpzz/ct-scroll/blob/master/figures/method_overview.png" alt="Method overview" width="900">
 
-## Getting Started
+---
+
+## 🚀 Getting Started
 
 ### Clone the Repository
 
@@ -22,7 +26,7 @@ To clone this repository, use the following command:
 git clone https://github.com/theodpzz/ct-scroll.git
 ```
 
-### ⚡️ Installation
+### Installation
 
 Make sure you have Python 3 installed. Then, install the dependencies using:
 
@@ -30,7 +34,7 @@ Make sure you have Python 3 installed. Then, install the dependencies using:
 pip install -r requirements.txt
 ```
 
-### 🚀 CT-Scroll Demo
+### ⚡️ CT-Scroll Demo
 
 To initialize the model with a classification head, use:
 
@@ -85,15 +89,21 @@ CT scans are reformated such that the first axis points from Inferior to Superio
 
 <img src="https://github.com/theodpzz/ct-scroll/blob/master/figures/orientation.png" alt="Orientation" width="900">
 
+---
+
 ## 🔗 Useful links
 
 2D ResNet18 pretrained on ImageNet is available at: [https://download.pytorch.org/models/resnet18-f37072fd.pth](https://download.pytorch.org/models/resnet18-f37072fd.pth).
 
 CT-Scroll pretrained weights on CT-RATE are available at [https://huggingface.co/theodpzz/ct-scroll](https://huggingface.co/theodpzz/ct-scroll).
 
+---
+
 ## 🤝🏻 Acknowledgment
 
 We thank contributors from the CT-RATE dataset available at [https://huggingface.co/datasets/ibrahimhamamci/CT-RATE](https://huggingface.co/datasets/ibrahimhamamci/CT-RATE), and from the Rad-ChestCT dataset available at [https://zenodo.org/records/6406114](https://zenodo.org/records/6406114).
+
+---
 
 ## 📎Citation
 
