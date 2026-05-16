@@ -14,6 +14,10 @@ The CT-Scroll architecture consists of three main components. (1) Axial slices o
 
 <img src="https://github.com/theodpzz/ct-scroll/blob/main/figures/method_overview.png" alt="Method overview" width="900">
 
+  > #### **Imitating Radiological Scrolling: a Global-Local Attention Model for 3D Chest CT Volumes Multi-label Anomaly Classification**<be>  
+  >Medical Imaging with Deep Learning (MIDL) 2025  
+  >Theo Di Piazza, Carole Lazarus, Olivier Nempont, Loic Boussel
+
 ---
 
 ### Notice
