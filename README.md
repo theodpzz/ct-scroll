@@ -12,7 +12,7 @@
 
 The CT-Scroll architecture consists of three main components. (1) Axial slices of the volume are grouped into triplets and processed by a ResNet followed by a GAP layer, producing a vector representation per triplet. (2) The Scrolling Block then refines these embedded visual tokens using both global and local attention mechanisms. (3) Finally, the aggregated representations are fed into a classification head to predict anomalies.
 
-<img src="https://github.com/theodpzz/ct-scroll/blob/main/figures/method_overview.png" alt="Method overview" width="900">
+<img src="./figures/method_overview.png" alt="Method overview" width="900">
 
   > #### **Imitating Radiological Scrolling: a Global-Local Attention Model for 3D Chest CT Volumes Multi-label Anomaly Classification**<be>  
   >Medical Imaging with Deep Learning (MIDL) 2025  
